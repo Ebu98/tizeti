@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { STUDENTS } from "./studentsList";
 
-import './App.css';
-import ResidentsList from './Components/ResidentsList';
-import Search from './Components/Search';
-import checkValidity from './Components/Search';
-import Error from './Components/Error';
-import 'h8k-components';
+import "./App.css";
+import ResidentsList from "./Components/ResidentsList";
+import Search from "./Components/Search";
+import checkValidity from "./Components/Search";
+import Error from "./Components/Error";
+import "h8k-components";
 
 const title = "Tizeti";
 function App() {
@@ -33,15 +33,15 @@ function App() {
       setError(`Sorry, ${searchInput}'s validity has Expired!`);
       return setHasError(true);
     }
-	setFilteredResults(prev => [...prev, getStudentByName])
+    setFilteredResults((prev) => [...prev, getStudentByName]);
   };
   return (
     <div className="App">
-        <h8k-navbar header={title}></h8k-navbar>
+      <h8k-navbar header={title}></h8k-navbar>
       <div className="layout-column justify-content-center align-items-center w-50 mx-auto">
-        <Search onAdd={onAdd} search={searchName} date={setDate}/>
-        <Error error={error}/>
-        <ResidentsList filteredResults={filteredResults}/>
+        <Search onAdd={onAdd} search={searchName} date={setDate} />
+        <Error error={error} />
+        <ResidentsList filteredResults={filteredResults} />
       </div>
     </div>
   );
