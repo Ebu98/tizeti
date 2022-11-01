@@ -1,6 +1,6 @@
 import React from "react";
 
-function ResidentsList({ filteredResults }) {
+function ResidentsList({ filteredResults}) {
   return (
     <div className="pa-10 mt-10 w-75">
       <div className="font-weight-bold text-center">Residents List</div>
@@ -12,9 +12,6 @@ function ResidentsList({ filteredResults }) {
           >
             <li key="item1" className="slide-up-fade-in">
               {input.name}
-            </li>
-            <li key="item1" className="slide-up-fade-in">
-              {input.validityDate}
             </li>
           </ul>
         );

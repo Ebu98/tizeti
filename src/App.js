@@ -20,7 +20,7 @@ function App() {
     setSearchInput(searchValue);
   };
 
-  const onAdd = () => {
+  const onAdd = (checkValidity) => {
     const getStudentByName = STUDENTS.find(
       (student) => student.name.toLowerCase() === searchInput.toLowerCase()
     );
@@ -40,7 +40,7 @@ function App() {
       <h8k-navbar header={title}></h8k-navbar>
       <div className="layout-column justify-content-center align-items-center w-50 mx-auto">
         <Search onAdd={onAdd} search={searchName} date={setDate} />
-        <Error error={error} />
+        {hasError && <Error error={error}/>}
         <ResidentsList filteredResults={filteredResults} />
       </div>
     </div>

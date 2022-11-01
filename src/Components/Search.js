@@ -43,7 +43,7 @@ function Search({ onAdd, search, date }) {
         type="button"
         data-testid="addBtn"
         className="small mb-0"
-        onClick={onAdd}
+        onClick={() => onAdd(checkValidity)}
       >
         Add
       </button>
